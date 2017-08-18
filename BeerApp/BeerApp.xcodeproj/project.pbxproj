@@ -15,6 +15,7 @@
 		096557281F47627F00ABC8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096557261F47627F00ABC8FD /* LaunchScreen.storyboard */; };
 		096557331F47627F00ABC8FD /* BeerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096557321F47627F00ABC8FD /* BeerAppTests.swift */; };
 		0965573E1F47627F00ABC8FD /* BeerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */; };
+		097D375E1F477FA70061DB03 /* SubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		096557391F47627F00ABC8FD /* BeerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppUITests.swift; sourceTree = "<group>"; };
 		0965573F1F47627F00ABC8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0965571B1F47627F00ABC8FD /* AppDelegate.swift */,
 				0965571D1F47627F00ABC8FD /* MasterViewController.swift */,
 				0965571F1F47627F00ABC8FD /* DetailViewController.swift */,
+				097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */,
 				096557211F47627F00ABC8FD /* Main.storyboard */,
 				096557241F47627F00ABC8FD /* Assets.xcassets */,
 				096557261F47627F00ABC8FD /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				096557201F47627F00ABC8FD /* DetailViewController.swift in Sources */,
+				097D375E1F477FA70061DB03 /* SubcategoriesViewController.swift in Sources */,
 				0965571E1F47627F00ABC8FD /* MasterViewController.swift in Sources */,
 				0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */,
 			);
@@ -511,6 +515,7 @@
 				096557441F47627F00ABC8FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		096557451F47627F00ABC8FD /* Build configuration list for PBXNativeTarget "BeerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +524,7 @@
 				096557471F47627F00ABC8FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		096557481F47627F00ABC8FD /* Build configuration list for PBXNativeTarget "BeerAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +533,7 @@
 				0965574A1F47627F00ABC8FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
