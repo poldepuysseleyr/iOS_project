@@ -13,7 +13,7 @@ import SwiftyJSON
 class MasterCategoriesViewController: UITableViewController {
     
     private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
-    private var categories = [String] = []
+    private var categories: [String] = []
 
     /*var detailViewController: DetailViewController? = nil
     var objects = [Any]()*/
@@ -27,12 +27,18 @@ class MasterCategoriesViewController: UITableViewController {
             print("Result: \(response.result)")
             
             if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+                let swiftyJSON = JSON(response.result.value!)
+            
+                for (_,subJson) in swiftyJSON["data"]{
+                    let string = subJson["name"].stringValue
+                    self.categories.append(string)
+                    /*print("string: \(string)" )*/
+                }
+                
+                
+               /* print("JSON: \(json)") // serialized json response*/
             }
             
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)") // original server data as UTF8 string
-            }
             
         }
 
@@ -75,6 +81,8 @@ class MasterCategoriesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieCell", for: indexPath)
+        let categorie = self.categories[indexPath.row]
+        cell.textLabel?.text = categorie
         return cell
     }
 

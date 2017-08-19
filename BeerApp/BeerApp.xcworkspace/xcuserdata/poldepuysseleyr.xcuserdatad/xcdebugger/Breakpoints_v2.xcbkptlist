@@ -19,5 +19,178 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/MasterCategoriesViewController.swift"
+            timestampString = "524844869.19324"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MasterCategoriesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.MasterCategoriesViewController.(categories in _05149F3986BA174FA6AEECD629F39CAB).getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/MasterCategoriesViewController.swift"
+                  timestampString = "524845726.069174"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.MasterCategoriesViewController.(categories in _05149F3986BA174FA6AEECD629F39CAB).setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/MasterCategoriesViewController.swift"
+                  timestampString = "524845726.074551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.MasterCategoriesViewController.init (style : __C.UITableViewStyle) -&gt; BeerApp.MasterCategoriesViewController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/MasterCategoriesViewController.swift"
+                  timestampString = "524845726.082652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "87">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.MasterCategoriesViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; BeerApp.MasterCategoriesViewController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/MasterCategoriesViewController.swift"
+                  timestampString = "524845726.089959"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.MasterCategoriesViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BeerApp.MasterCategoriesViewController&gt;"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/MasterCategoriesViewController.swift"
+                  timestampString = "524845726.098177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/MasterCategoriesViewController.swift"
+            timestampString = "524847162.273915"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/SubCategoriesViewController.swift"
+            timestampString = "524849266.345963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/SubCategoriesViewController.swift"
+            timestampString = "524849267.052018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/SubCategoriesViewController.swift"
+            timestampString = "524849454.169677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/SubCategoriesViewController.swift"
+            timestampString = "524849454.169677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
