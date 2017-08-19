@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571B1F47627F00ABC8FD /* AppDelegate.swift */; };
-		0965571E1F47627F00ABC8FD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571D1F47627F00ABC8FD /* MasterViewController.swift */; };
+		0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */; };
 		096557201F47627F00ABC8FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571F1F47627F00ABC8FD /* DetailViewController.swift */; };
 		096557231F47627F00ABC8FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096557211F47627F00ABC8FD /* Main.storyboard */; };
 		096557251F47627F00ABC8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096557241F47627F00ABC8FD /* Assets.xcassets */; };
 		096557281F47627F00ABC8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096557261F47627F00ABC8FD /* LaunchScreen.storyboard */; };
 		096557331F47627F00ABC8FD /* BeerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096557321F47627F00ABC8FD /* BeerAppTests.swift */; };
 		0965573E1F47627F00ABC8FD /* BeerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */; };
-		097D375E1F477FA70061DB03 /* SubcategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */; };
+		09DB43751F48605B00E3E9A1 /* SubCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DB43741F48605B00E3E9A1 /* SubCategoriesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		096557181F47627F00ABC8FD /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965571B1F47627F00ABC8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0965571D1F47627F00ABC8FD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCategoriesViewController.swift; sourceTree = "<group>"; };
 		0965571F1F47627F00ABC8FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		096557221F47627F00ABC8FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		096557241F47627F00ABC8FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		096557391F47627F00ABC8FD /* BeerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppUITests.swift; sourceTree = "<group>"; };
 		0965573F1F47627F00ABC8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcategoriesViewController.swift; sourceTree = "<group>"; };
+		09DB43741F48605B00E3E9A1 /* SubCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				0965571B1F47627F00ABC8FD /* AppDelegate.swift */,
-				0965571D1F47627F00ABC8FD /* MasterViewController.swift */,
+				0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */,
 				0965571F1F47627F00ABC8FD /* DetailViewController.swift */,
-				097D375D1F477FA70061DB03 /* SubcategoriesViewController.swift */,
+				09DB43741F48605B00E3E9A1 /* SubCategoriesViewController.swift */,
 				096557211F47627F00ABC8FD /* Main.storyboard */,
 				096557241F47627F00ABC8FD /* Assets.xcassets */,
 				096557261F47627F00ABC8FD /* LaunchScreen.storyboard */,
@@ -266,8 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				096557201F47627F00ABC8FD /* DetailViewController.swift in Sources */,
-				097D375E1F477FA70061DB03 /* SubcategoriesViewController.swift in Sources */,
-				0965571E1F47627F00ABC8FD /* MasterViewController.swift in Sources */,
+				09DB43751F48605B00E3E9A1 /* SubCategoriesViewController.swift in Sources */,
+				0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */,
 				0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
