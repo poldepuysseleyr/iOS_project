@@ -7,5 +7,25 @@
 //
 
 import Foundation
-/*  let apikey = 4626ec2bee6f31163dca9b789a8a76d1 */
+
 import UIKit
+import Alamofire
+import SwiftyJSON
+
+class Service{
+    
+    private let apikey = "4626ec2bee6f31163dca9b789a8a76d1"
+    
+    
+        
+    
+    
+}
+
+
+
+
+
+
+
+

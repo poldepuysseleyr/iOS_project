@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerApp/AppDelegate.swift"
@@ -19,14 +19,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BeerApp.AppDelegate.__deallocating_deinit"
                   moduleName = "BeerApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/AppDelegate.swift"
-                  timestampString = "524836680.560617"
+                  timestampString = "524844217.593511"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -34,14 +34,14 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BeerApp.AppDelegate.init () -&gt; BeerApp.AppDelegate"
                   moduleName = "BeerApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/AppDelegate.swift"
-                  timestampString = "524836680.575265"
+                  timestampString = "524844217.599739"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -49,14 +49,14 @@
                   offsetFromSymbolStart = "24">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "BeerApp.AppDelegate.__allocating_init () -&gt; BeerApp.AppDelegate"
                   moduleName = "BeerApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/AppDelegate.swift"
-                  timestampString = "524836680.579621"
+                  timestampString = "524844217.602312"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -64,14 +64,14 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "main"
                   moduleName = "BeerApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/AppDelegate.swift"
-                  timestampString = "524836680.581279"
+                  timestampString = "524844217.604118"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -79,6 +79,20 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/Service.swift"
+            timestampString = "524844213.518059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

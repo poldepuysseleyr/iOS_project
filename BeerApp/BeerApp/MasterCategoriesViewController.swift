@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class MasterCategoriesViewController: UITableViewController {
+    
+    private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
+    private var categories = [String] = []
 
     /*var detailViewController: DetailViewController? = nil
     var objects = [Any]()*/
@@ -16,6 +21,21 @@ class MasterCategoriesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Alamofire.request("https://api.brewerydb.com/v2/categories?" + apikey).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+            
+        }
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +70,7 @@ class MasterCategoriesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return categories.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
