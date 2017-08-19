@@ -9,10 +9,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Beer Overview-->
+        <scene sceneID="RkG-0J-NUs">
+            <objects>
+                <collectionViewController id="dyK-fi-dB4" customClass="BeerCollectionViewController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2BS-m9-U05">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vjl-93-Qd3">
+                            <size key="itemSize" width="194" height="158"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeerOverviewCell" id="0jn-co-sOy">
+                                <rect key="frame" x="90.5" y="0.0" width="194" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="194" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-oZ-bJm">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="158"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="zQT-oZ-bJm" firstAttribute="top" secondItem="0jn-co-sOy" secondAttribute="top" id="6x8-r3-GGK"/>
+                                    <constraint firstAttribute="trailing" secondItem="zQT-oZ-bJm" secondAttribute="trailing" id="Bk0-Hu-pPl"/>
+                                    <constraint firstAttribute="bottom" secondItem="zQT-oZ-bJm" secondAttribute="bottom" id="emd-y3-waP"/>
+                                    <constraint firstItem="zQT-oZ-bJm" firstAttribute="leading" secondItem="0jn-co-sOy" secondAttribute="leading" id="zIU-fa-Dos"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dyK-fi-dB4" id="cQl-Ut-1bU"/>
+                            <outlet property="delegate" destination="dyK-fi-dB4" id="lRG-pw-flM"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Beer Overview" id="Qsk-Kt-xYu"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLw-0Y-clt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088.8000000000002" y="-251.42428785607197"/>
+        </scene>
         <!--SubCategories-->
         <scene sceneID="SGy-A4-K13">
             <objects>
-                <viewController title="SubCategories" id="0of-Uy-vqA" customClass="SubCategoriesViewController" sceneMemberID="viewController">
+                <viewController title="SubCategories" id="0of-Uy-vqA" customClass="SubCategoriesViewController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="See-yx-IkQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,6 +80,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="WbJ-Eq-iN9" kind="showDetail" id="RMF-yy-n9O"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -160,6 +209,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N10-rp-edZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-580" y="-249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qQR-ox-OdY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbJ-Eq-iN9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KIE-Ly-9TJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dyK-fi-dB4" kind="relationship" relationship="rootViewController" id="ekU-JW-Vbh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r4-3Z-m6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="-251"/>
         </scene>
     </scenes>
 </document>

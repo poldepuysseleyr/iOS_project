@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SubCateogiresViewController : UITableViewController{
+class SubCategoriesViewController : UITableViewController{
     
     
     func configureView() {
