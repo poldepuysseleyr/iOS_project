@@ -35,15 +35,19 @@ class BeerCollectionViewController : UICollectionViewController{
                 for (_,subJson) in swiftyJSON["data"]{
                     let beerId = subJson["id"].intValue
                     let beerName = subJson["name"].stringValue
+                    var beerDescription = "No description available"
+                    if !subJson["description"].stringValue.isEmpty {
+                        beerDescription = subJson["description"].stringValue
+                    }
                     let label = subJson["labels"]
                     print("label: \(label)" )
 
                     
                     if !subJson["labels"]["medium"].stringValue.isEmpty{
                         let beerLabel = subJson["labels"]["medium"].stringValue
-                        self.beers.append(Beer.init(id: beerId, name: beerName, label: beerLabel))
+                        self.beers.append(Beer.init(id: beerId, name: beerName, label: beerLabel, description : beerDescription))
                     }else{
-                        self.beers.append(Beer.init(id: beerId, name: beerName, label: ""))
+                        self.beers.append(Beer.init(id: beerId, name: beerName, label: "", description : beerDescription))
                     }
                     
                     
@@ -63,6 +67,19 @@ class BeerCollectionViewController : UICollectionViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowBeer" {
+            if let indexPath = collectionView!.indexPathsForSelectedItems?.first {
+                let beerToPass = self.beers[indexPath.row]
+                let navigationController = segue.destination as! UINavigationController
+                let beerViewController = navigationController.topViewController as! BeerViewController
+                beerViewController.beer = beerToPass
+                
+            }
+            
+        }
+    }
+    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -76,8 +93,7 @@ class BeerCollectionViewController : UICollectionViewController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerOverviewCell", for: indexPath) as! BeerOverviewCell
         let beer = self.beers[indexPath.row]
         if beer.label.isEmpty{
-            let url = URL(string: "https://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437")!
-            cell.imageView.af_setImage(withURL: url)
+            cell.imageView.image = #imageLiteral(resourceName: "Label_Placeholder")
         }else{
             let url = URL(string: beer.label)!
             cell.imageView.af_setImage(withURL: url)

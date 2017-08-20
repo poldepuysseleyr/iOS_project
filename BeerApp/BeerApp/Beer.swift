@@ -11,10 +11,12 @@ class Beer {
     let id : Int
     let name : String
     let label : String
+    let description : String
     
-    init(id : Int, name : String, label : String) {
+    init(id : Int, name : String, label : String, description : String) {
         self.id = id
         self.name = name
         self.label = label
+        self.description = description
     }
 }
