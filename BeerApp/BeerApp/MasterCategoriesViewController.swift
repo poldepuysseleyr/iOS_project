@@ -13,7 +13,7 @@ import SwiftyJSON
 class MasterCategoriesViewController: UITableViewController {
     
     private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
-    private var categories: [String] = []
+    private var categories = [Category]()
 
     /*var detailViewController: DetailViewController? = nil
     var objects = [Any]()*/
@@ -30,8 +30,10 @@ class MasterCategoriesViewController: UITableViewController {
                 let swiftyJSON = JSON(response.result.value!)
             
                 for (_,subJson) in swiftyJSON["data"]{
-                    let string = subJson["name"].stringValue
-                    self.categories.append(string)
+                    let categoryId = subJson["id"].intValue
+                    let categoryName = subJson["name"].stringValue
+                    let category = Category.init(id: categoryId, name: categoryName)
+                    self.categories.append(category)
                     /*print("string: \(string)" )*/
                 }
                 
@@ -58,15 +60,14 @@ class MasterCategoriesViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*if segue.identifier == "showDetail" {
+        if segue.identifier == "ShowSubCategorie" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                let categoryIdToPass = categories[indexPath.row].id
+                let navigationController = segue.destination as! UINavigationController
+                let subCategoriesController = navigationController.topViewController as! SubCategoriesViewController
+                subCategoriesController.categoryId = categoryIdToPass
             }
-        }*/
+        }
     }
 
     // MARK: - Table View
@@ -82,9 +83,13 @@ class MasterCategoriesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategorieCell", for: indexPath)
         let categorie = self.categories[indexPath.row]
-        cell.textLabel?.text = categorie
+        cell.textLabel?.text = categorie.name
         return cell
     }
+    
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "categoryId", sender: self)
+    }*/
 
     /*override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.

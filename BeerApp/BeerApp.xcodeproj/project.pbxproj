@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		090E1B981F4876900025B014 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E1B971F4876900025B014 /* BeerViewController.swift */; };
+		0948FE8B1F49B75700EEF972 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948FE8A1F49B75700EEF972 /* Category.swift */; };
 		0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571B1F47627F00ABC8FD /* AppDelegate.swift */; };
 		0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */; };
 		096557201F47627F00ABC8FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965571F1F47627F00ABC8FD /* DetailViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		090E1B971F4876900025B014 /* BeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		0948FE8A1F49B75700EEF972 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		096557181F47627F00ABC8FD /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965571B1F47627F00ABC8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0948FE891F49B73800EEF972 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0948FE8A1F49B75700EEF972 /* Category.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0965570F1F47627E00ABC8FD = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		0965571A1F47627F00ABC8FD /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
+				0948FE891F49B73800EEF972 /* Models */,
 				09DB43771F48668300E3E9A1 /* Service */,
 				09DB43791F4866A400E3E9A1 /* ViewControllers */,
 				09DB437A1F4866C200E3E9A1 /* Views */,
@@ -506,6 +517,7 @@
 				09DB437C1F48678600E3E9A1 /* Service.swift in Sources */,
 				0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */,
 				0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */,
+				0948FE8B1F49B75700EEF972 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

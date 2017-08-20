@@ -15,6 +15,7 @@ class SubCategoriesViewController : UITableViewController{
     
     private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
     private var subCategories: [String] = []
+    var categoryId : Int = 0
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -37,9 +38,9 @@ class SubCategoriesViewController : UITableViewController{
                 let swiftyJSON = JSON(response.result.value!)
                 
                 for (_,subJson) in swiftyJSON["data"]{
-                    let string = subJson["categoryId"].intValue
+                    let categoryIdStyle = subJson["categoryId"].intValue
                     let style = subJson["name"].stringValue
-                    if string == 1 {
+                    if categoryIdStyle == self.categoryId {
                         self.subCategories.append(style)
                         print("string: \(style)" )
                     }

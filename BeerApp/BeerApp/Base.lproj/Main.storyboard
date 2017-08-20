@@ -25,7 +25,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeerOverviewCell" id="0jn-co-sOy">
-                                <rect key="frame" x="90.5" y="0.0" width="194" height="158"/>
+                                <rect key="frame" x="91" y="0.0" width="194" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="194" height="158"/>
@@ -180,7 +180,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="HBE-sD-BWk" kind="showDetail" id="fpT-ei-6gf"/>
+                                    <segue destination="HBE-sD-BWk" kind="showDetail" identifier="ShowSubCategorie" id="fpT-ei-6gf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
