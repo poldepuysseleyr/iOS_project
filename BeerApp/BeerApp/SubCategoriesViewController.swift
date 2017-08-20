@@ -14,7 +14,7 @@ import SwiftyJSON
 class SubCategoriesViewController : UITableViewController{
     
     private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
-    private var subCategories: [String] = []
+    private var subCategories: [SubCategory] = []
     var categoryId : Int = 0
     
     func configureView() {
@@ -38,10 +38,11 @@ class SubCategoriesViewController : UITableViewController{
                 let swiftyJSON = JSON(response.result.value!)
                 
                 for (_,subJson) in swiftyJSON["data"]{
+                    let styleId = subJson["id"].intValue
                     let categoryIdStyle = subJson["categoryId"].intValue
                     let style = subJson["name"].stringValue
                     if categoryIdStyle == self.categoryId {
-                        self.subCategories.append(style)
+                        self.subCategories.append(SubCategory.init(id: styleId, name: style))
                         print("string: \(style)" )
                     }
                     self.tableView.reloadData()
@@ -74,9 +75,20 @@ class SubCategoriesViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategorieCell", for: indexPath)
-        let subCategorie = self.subCategories[indexPath.row]
-        cell.textLabel?.text = subCategorie
+        let subCategory = self.subCategories[indexPath.row]
+        cell.textLabel?.text = subCategory.name
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowBeerOverview" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let subCategoryIdToPass = self.subCategories[indexPath.row].id
+                let navigationController = segue.destination as! UINavigationController
+                let beerCollectionViewController = navigationController.topViewController as! BeerCollectionViewController
+                beerCollectionViewController.subCategoryId = subCategoryIdToPass
+            }
+        }
     }
 
     
