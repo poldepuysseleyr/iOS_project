@@ -24,15 +24,19 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeerOverviewCell" id="0jn-co-sOy">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeerOverviewCell" id="0jn-co-sOy" customClass="BeerOverviewCell" customModule="BeerApp" customModuleProvider="target">
                                 <rect key="frame" x="91" y="0.0" width="194" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="194" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvL-8S-3YH">
-                                            <rect key="frame" x="0.0" y="69" width="194" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ah-ge-Yqe">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="106"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go1-39-D4E">
+                                            <rect key="frame" x="0.0" y="114" width="194" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -41,6 +45,8 @@
                                     </subviews>
                                 </view>
                                 <connections>
+                                    <outlet property="imageView" destination="7Ah-ge-Yqe" id="nAe-Kj-nUf"/>
+                                    <outlet property="nameLabel" destination="go1-39-D4E" id="6Pq-6B-BKi"/>
                                     <segue destination="BnA-8Y-6YW" kind="showDetail" id="Wmj-nN-45G"/>
                                 </connections>
                             </collectionViewCell>

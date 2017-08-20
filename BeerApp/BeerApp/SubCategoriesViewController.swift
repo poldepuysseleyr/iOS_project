@@ -43,7 +43,6 @@ class SubCategoriesViewController : UITableViewController{
                     let style = subJson["name"].stringValue
                     if categoryIdStyle == self.categoryId {
                         self.subCategories.append(SubCategory.init(id: styleId, name: style))
-                        print("string: \(style)" )
                     }
                     self.tableView.reloadData()
                     

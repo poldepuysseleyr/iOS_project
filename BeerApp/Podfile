@@ -8,6 +8,7 @@
   # Pods for BeerApp
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'AlamofireImage'
 
 
   target 'BeerAppTests' do

@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+class BeerOverviewCell : UICollectionViewCell {
+    
+    @IBOutlet weak var imageView : UIImageView!
+    @IBOutlet weak var nameLabel : UILabel!
+    
+}
+

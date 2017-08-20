@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import AlamofireImage
 
 class BeerCollectionViewController : UICollectionViewController{
     
@@ -34,8 +35,19 @@ class BeerCollectionViewController : UICollectionViewController{
                 for (_,subJson) in swiftyJSON["data"]{
                     let beerId = subJson["id"].intValue
                     let beerName = subJson["name"].stringValue
-                    self.beers.append(Beer.init(id: beerId, name: beerName))
-                    print("string: \(beerName)" )
+                    let label = subJson["labels"]
+                    print("label: \(label)" )
+
+                    
+                    if !subJson["labels"]["medium"].stringValue.isEmpty{
+                        let beerLabel = subJson["labels"]["medium"].stringValue
+                        self.beers.append(Beer.init(id: beerId, name: beerName, label: beerLabel))
+                    }else{
+                        self.beers.append(Beer.init(id: beerId, name: beerName, label: ""))
+                    }
+                    
+                    
+                    
                     
                     self.collectionView!.reloadData()
                     
@@ -61,10 +73,21 @@ class BeerCollectionViewController : UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerOverviewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerOverviewCell", for: indexPath) as! BeerOverviewCell
         let beer = self.beers[indexPath.row]
-        let textLabel = cell.viewWithTag(1) as! UILabel
-        textLabel.text = beer.name
+        if beer.label.isEmpty{
+            let url = URL(string: "https://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437")!
+            cell.imageView.af_setImage(withURL: url)
+        }else{
+            let url = URL(string: beer.label)!
+            cell.imageView.af_setImage(withURL: url)
+        }
+        
+        
+        
+        
+        /*cell.imageView.backgroundColor = UIColor.black*/
+        cell.nameLabel.text = beer.name
         return cell
     }
     
