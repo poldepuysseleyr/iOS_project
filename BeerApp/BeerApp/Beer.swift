@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 class Beer {
     let id : String
     let name : String
@@ -27,5 +28,30 @@ class Beer {
         self.brewery = brewery
         self.label = label
         self.description = description
+    }
+}
+
+extension Beer {
+    
+    convenience init(json : JSON, style : Style){
+        let beerId = json["id"].stringValue
+        let beerName = json["name"].stringValue
+        let beerStyle = style.name
+        let beerABV = json["abv"].stringValue
+        let beerAvailability = json["available"]["name"].stringValue
+        let beerBrewery = json["breweries"]["name"].stringValue
+        var beerDescription = "No description available"
+        if !json["description"].stringValue.isEmpty {
+            beerDescription = json["description"].stringValue
+        }
+        
+        if !json["labels"]["medium"].stringValue.isEmpty{
+            let beerLabel = json["labels"]["medium"].stringValue
+            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
+                                        brewery : beerBrewery, label: beerLabel, description : beerDescription)
+        }else{
+            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
+                                        brewery : beerBrewery, label: "", description : beerDescription)
+        }
     }
 }

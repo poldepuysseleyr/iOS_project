@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class MasterCategoriesViewController: UITableViewController {
     
-    private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
     private var categories = [Category]()
 
     /*var detailViewController: DetailViewController? = nil
@@ -38,21 +37,19 @@ class MasterCategoriesViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-   
-    // MARK: - Segues
+
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowSubCategorie" {
+        if segue.identifier == "ShowStyles" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let categoryIdToPass = categories[indexPath.row].id
                 let navigationController = segue.destination as! UINavigationController
-                let subCategoriesController = navigationController.topViewController as! SubCategoriesViewController
+                let subCategoriesController = navigationController.topViewController as! StylesViewController
                 subCategoriesController.categoryId = categoryIdToPass
             }
         }
     }
 
-    // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -18,7 +18,7 @@ class Service{
     
     static let shared = Service()
     
-    func getCategories(completionHandler : @escaping([Category]) -> Void) -> () {
+    func getCategories(completionHandler : @escaping([Category]) -> Void) -> Void {
         Alamofire.request("https://api.brewerydb.com/v2/categories?" + apikey).responseJSON{ response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
@@ -28,34 +28,66 @@ class Service{
             let swiftyJSON = JSON(response.result.value!)
             
             for (_,subJson) in swiftyJSON["data"]{
-                 categories.append(Category.init(json: subJson
-                 ))
+                 categories.append(Category.init(json: subJson))
                 /*print("string: \(string)" )*/
             }
-            completionHandler(categories)
+            categories.removeLast()
+            completionHandler(categories.sorted(by: {$0.name < $1.name }))
             
            
-            
-                /* print("JSON: \(json)") // serialized json response*/
+
         
             
             
         }
     }
     
-    /*func loadUser(completionHandler: @escaping (DataResponse<User>) -> Void) -> Alamofire.DataRequest {
-        return Alamofire.request("https://example.com/users/mattt").responseJSON { response in
-            let userResponse = response.flatMap { json in
-                try User(json: json)
-            }
+    func getStyles(categoryId : Int , completionHandler : @escaping([Style]) -> Void) -> Void {
+        Alamofire.request("https://api.brewerydb.com/v2/styles?" + apikey).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
             
-            completionHandler(userResponse)
+            var styles = [Style]()
+            let swiftyJSON = JSON(response.result.value!)
+            
+            for (_,subJson) in swiftyJSON["data"]{
+                if let style = Style.init(json: subJson, categoryId: categoryId){
+                    styles.append(style)
+                }
+                
+            }
+            completionHandler(styles.sorted(by: {$0.name < $1.name}))
+            
+
+            
+            
+            
         }
-    }*/
+    }
     
+    func getBeers(style : Style , completionHandler : @escaping([Beer]) -> Void) -> Void {
+        let parameters: Parameters = ["styleId": style.id]
+        Alamofire.request("https://api.brewerydb.com/v2/beers?" + apikey, method : .get, parameters : parameters).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
+            
+            var beers = [Beer]()
+            let swiftyJSON = JSON(response.result.value!)
+                
+            for (_,subJson) in swiftyJSON["data"]{
+                beers.append(Beer.init(json: subJson, style: style))
+            }
+            completionHandler(beers.sorted(by: {$0.name < $1.name}))
+            
+            
+            
+        }
+    }
     
+
         
-    
     
 }
 

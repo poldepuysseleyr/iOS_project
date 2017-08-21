@@ -23,14 +23,16 @@ class Category{
 extension Category {
     
     convenience init(json : JSON) {
-
+        
         
         let categoryId = json["id"].intValue
         let categoryName = json["name"].stringValue
-            
-        
         self.init(id: categoryId, name: categoryName)
+        
+        
+        
+        
+        
+    }
     
-}
-
 }
