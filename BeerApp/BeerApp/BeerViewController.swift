@@ -9,11 +9,19 @@
 import Foundation
 import UIKit
 import AlamofireImage
+import Alamofire
+import SwiftyJSON
 class BeerViewController : UITableViewController {
     
     @IBOutlet weak var beerName : UILabel!
+    @IBOutlet weak var beerABV : UILabel!
+    @IBOutlet weak var beerBrewery : UILabel!
+    @IBOutlet weak var beerStyle : UILabel!
+    @IBOutlet weak var beerAvailability : UILabel!
     @IBOutlet weak var beerDescription : UILabel!
     @IBOutlet weak var imageView : UIImageView!
+    
+    private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
 
     
     var beer : Beer?
@@ -23,7 +31,11 @@ class BeerViewController : UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
         
-        beerName.text = beer!.name
+        beerName.text = "Name: \(beer!.name)"
+        beerABV.text = "ABV: \(beer!.ABV) %"
+        beerBrewery.text = "Brewed by: \(beer!.brewery)"
+        beerStyle.text = "Style: \(beer!.style)"
+        beerAvailability.text = "Availability: \(beer!.availability)"
         beerDescription.text = beer!.description
         
         
@@ -34,7 +46,6 @@ class BeerViewController : UITableViewController {
             imageView.af_setImage(withURL: url)
         }
         
-
         
         
     }

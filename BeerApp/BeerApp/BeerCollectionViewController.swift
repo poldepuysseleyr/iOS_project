@@ -15,14 +15,14 @@ import AlamofireImage
 class BeerCollectionViewController : UICollectionViewController{
     
     
-    var subCategoryId : Int = 0
+    var subCategory : SubCategory?
     private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
     private var beers: [Beer] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parameters: Parameters = ["styleId": self.subCategoryId]
+        let parameters: Parameters = ["styleId": self.subCategory!.id]
         // Do any additional setup after loading the view, typically from a nib.
         Alamofire.request("https://api.brewerydb.com/v2/beers?" + apikey, method : .get, parameters : parameters).responseJSON{ response in
             print("Request: \(String(describing: response.request))")   // original url request
@@ -33,8 +33,12 @@ class BeerCollectionViewController : UICollectionViewController{
                 let swiftyJSON = JSON(response.result.value!)
                 
                 for (_,subJson) in swiftyJSON["data"]{
-                    let beerId = subJson["id"].intValue
+                    let beerId = subJson["id"].stringValue
                     let beerName = subJson["name"].stringValue
+                    let beerStyle = self.subCategory!.name
+                    let beerABV = subJson["abv"].stringValue
+                    let beerAvailability = subJson["available"]["name"].stringValue
+                    let beerBrewery = subJson["breweries"]["name"].stringValue
                     var beerDescription = "No description available"
                     if !subJson["description"].stringValue.isEmpty {
                         beerDescription = subJson["description"].stringValue
@@ -45,9 +49,11 @@ class BeerCollectionViewController : UICollectionViewController{
                     
                     if !subJson["labels"]["medium"].stringValue.isEmpty{
                         let beerLabel = subJson["labels"]["medium"].stringValue
-                        self.beers.append(Beer.init(id: beerId, name: beerName, label: beerLabel, description : beerDescription))
+                        self.beers.append(Beer.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
+                                                    brewery : beerBrewery, label: beerLabel, description : beerDescription))
                     }else{
-                        self.beers.append(Beer.init(id: beerId, name: beerName, label: "", description : beerDescription))
+                        self.beers.append(Beer.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
+                                                    brewery : beerBrewery, label: "", description : beerDescription))
                     }
                     
                     
@@ -59,7 +65,7 @@ class BeerCollectionViewController : UICollectionViewController{
                 }
                 
                 
-                /*print("JSON: \(json)") // serialized json response*/
+                print("JSON: \(json)") // serialized json response
             }
             
             

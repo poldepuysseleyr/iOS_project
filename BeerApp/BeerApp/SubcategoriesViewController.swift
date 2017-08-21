@@ -82,10 +82,10 @@ class SubCategoriesViewController : UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowBeerOverview" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let subCategoryIdToPass = self.subCategories[indexPath.row].id
+                let subCategoryToPass = self.subCategories[indexPath.row]
                 let navigationController = segue.destination as! UINavigationController
                 let beerCollectionViewController = navigationController.topViewController as! BeerCollectionViewController
-                beerCollectionViewController.subCategoryId = subCategoryIdToPass
+                beerCollectionViewController.subCategory = subCategoryToPass
             }
         }
     }
