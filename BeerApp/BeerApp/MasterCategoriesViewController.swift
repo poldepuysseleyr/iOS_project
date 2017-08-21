@@ -21,27 +21,9 @@ class MasterCategoriesViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request("https://api.brewerydb.com/v2/categories?" + apikey).responseJSON{ response in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")
-            
-            if let json = response.result.value {
-                let swiftyJSON = JSON(response.result.value!)
-            
-                for (_,subJson) in swiftyJSON["data"]{
-                    let categoryId = subJson["id"].intValue
-                    let categoryName = subJson["name"].stringValue
-                    let category = Category.init(id: categoryId, name: categoryName)
-                    self.categories.append(category)
-                    /*print("string: \(string)" )*/
-                }
-                
-                
-               /* print("JSON: \(json)") // serialized json response*/
-            }
-            
-            
+        Service.shared.getCategories{result in
+            self.categories = result
+            self.tableView.reloadData()
         }
 
     }

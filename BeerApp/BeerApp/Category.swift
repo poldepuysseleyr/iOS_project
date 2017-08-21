@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Category{
     let id : Int
@@ -17,4 +18,19 @@ class Category{
         self.name = name
     }
     
+}
+
+extension Category {
+    
+    convenience init(json : JSON) {
+
+        
+        let categoryId = json["id"].intValue
+        let categoryName = json["name"].stringValue
+            
+        
+        self.init(id: categoryId, name: categoryName)
+    
+}
+
 }
