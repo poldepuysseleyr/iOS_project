@@ -67,4 +67,7 @@ class BeerCollectionViewController : UICollectionViewController{
         return cell
     }
     
+    
+
+    
 }
