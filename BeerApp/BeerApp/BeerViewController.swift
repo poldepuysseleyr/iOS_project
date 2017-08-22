@@ -25,15 +25,20 @@ class BeerViewController : UITableViewController {
 
     
     var beer : Beer?
+    private var breweries : [Brewery] = []
     
     override func viewDidLoad(){
+        
+        Service.shared.getBreweryFromBeer(beerId: self.beer!.id){result in
+            self.breweries = result
+            self.beerBrewery.text = "Brewed by: \(self.breweries[0].name)"
+        }
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
         
         beerName.text = "Name: \(beer!.name)"
         beerABV.text = "ABV: \(beer!.ABV) %"
-        beerBrewery.text = "Brewed by: \(beer!.brewery)"
         beerStyle.text = "Style: \(beer!.style)"
         beerAvailability.text = "Availability: \(beer!.availability)"
         beerDescription.text = beer!.description
@@ -60,6 +65,15 @@ class BeerViewController : UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowBrewery"{
+            let tabBarViewController = segue.destination as! UITabBarController
+            let breweryDetailController =  tabBarViewController.viewControllers?[0] as! BreweryDetailController
+            breweryDetailController.brewery = self.breweries[0]
+            
+        }
     }
     
     

@@ -14,18 +14,16 @@ class Beer {
     let style : String
     let ABV : String
     let availability : String
-    let brewery : String
     let label : String
     let description : String
     
     
-    init(id : String, name : String, style : String, ABV : String, availability : String, brewery : String, label : String, description : String) {
+    init(id : String, name : String, style : String, ABV : String, availability : String,label : String, description : String) {
         self.id = id
         self.name = name
         self.style = style
         self.ABV = ABV
         self.availability = availability
-        self.brewery = brewery
         self.label = label
         self.description = description
     }
@@ -38,8 +36,10 @@ extension Beer {
         let beerName = json["name"].stringValue
         let beerStyle = style.name
         let beerABV = json["abv"].stringValue
-        let beerAvailability = json["available"]["name"].stringValue
-        let beerBrewery = json["breweries"]["name"].stringValue
+        var beerAvailability = "Unknown"
+        if !json["available"]["name"].stringValue.isEmpty {
+            beerAvailability = json["available"]["name"].stringValue
+        }
         var beerDescription = "No description available"
         if !json["description"].stringValue.isEmpty {
             beerDescription = json["description"].stringValue
@@ -47,11 +47,9 @@ extension Beer {
         
         if !json["labels"]["medium"].stringValue.isEmpty{
             let beerLabel = json["labels"]["medium"].stringValue
-            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
-                                        brewery : beerBrewery, label: beerLabel, description : beerDescription)
+            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability, label: beerLabel, description : beerDescription)
         }else{
-            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability,
-                                        brewery : beerBrewery, label: "", description : beerDescription)
+            self.init(id: beerId, name: beerName, style : beerStyle, ABV: beerABV, availability : beerAvailability, label: "", description : beerDescription)
         }
     }
 }

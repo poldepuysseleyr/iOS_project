@@ -20,6 +20,8 @@
 		096557281F47627F00ABC8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096557261F47627F00ABC8FD /* LaunchScreen.storyboard */; };
 		096557331F47627F00ABC8FD /* BeerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096557321F47627F00ABC8FD /* BeerAppTests.swift */; };
 		0965573E1F47627F00ABC8FD /* BeerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */; };
+		097115971F4B660F00BB26A0 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097115961F4B660F00BB26A0 /* Brewery.swift */; };
+		097115991F4B70A100BB26A0 /* BreweryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097115981F4B70A100BB26A0 /* BreweryDetailController.swift */; };
 		09DB43751F48605B00E3E9A1 /* StylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DB43741F48605B00E3E9A1 /* StylesViewController.swift */; };
 		09DB437C1F48678600E3E9A1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DB437B1F48678600E3E9A1 /* Service.swift */; };
 		09DB437E1F4869D700E3E9A1 /* BeerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DB437D1F4869D700E3E9A1 /* BeerCollectionViewController.swift */; };
@@ -65,6 +67,8 @@
 		096557391F47627F00ABC8FD /* BeerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0965573D1F47627F00ABC8FD /* BeerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppUITests.swift; sourceTree = "<group>"; };
 		0965573F1F47627F00ABC8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097115961F4B660F00BB26A0 /* Brewery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		097115981F4B70A100BB26A0 /* BreweryDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryDetailController.swift; sourceTree = "<group>"; };
 		09DB43741F48605B00E3E9A1 /* StylesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylesViewController.swift; sourceTree = "<group>"; };
 		09DB437B1F48678600E3E9A1 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		09DB437D1F4869D700E3E9A1 /* BeerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				0948FE8A1F49B75700EEF972 /* Category.swift */,
 				0948FE8C1F49BF3E00EEF972 /* Style.swift */,
 				0948FE8E1F49C76B00EEF972 /* Beer.swift */,
+				097115961F4B660F00BB26A0 /* Brewery.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				0965571D1F47627F00ABC8FD /* MasterCategoriesViewController.swift */,
 				09DB437D1F4869D700E3E9A1 /* BeerCollectionViewController.swift */,
 				090E1B971F4876900025B014 /* BeerViewController.swift */,
+				097115981F4B70A100BB26A0 /* BreweryDetailController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -522,9 +528,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DB437E1F4869D700E3E9A1 /* BeerCollectionViewController.swift in Sources */,
+				097115991F4B70A100BB26A0 /* BreweryDetailController.swift in Sources */,
 				096557201F47627F00ABC8FD /* DetailViewController.swift in Sources */,
 				090E1B981F4876900025B014 /* BeerViewController.swift in Sources */,
 				09DB43751F48605B00E3E9A1 /* StylesViewController.swift in Sources */,
+				097115971F4B660F00BB26A0 /* Brewery.swift in Sources */,
 				09DB437C1F48678600E3E9A1 /* Service.swift in Sources */,
 				0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */,
 				0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */,

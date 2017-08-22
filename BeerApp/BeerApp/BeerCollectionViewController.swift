@@ -16,7 +16,7 @@ class BeerCollectionViewController : UICollectionViewController{
     
     
     var style : Style?
-    private var beers: [Beer] = []
+    private var beers: [Beer] = []    
     
     
     override func viewDidLoad() {

@@ -31,6 +31,6 @@ extension Style{
         }else {
             return nil
         }
-
+        
     }
 }

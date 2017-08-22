@@ -28,15 +28,15 @@ class Service{
             let swiftyJSON = JSON(response.result.value!)
             
             for (_,subJson) in swiftyJSON["data"]{
-                 categories.append(Category.init(json: subJson))
+                categories.append(Category.init(json: subJson))
                 /*print("string: \(string)" )*/
             }
             categories.removeLast()
             completionHandler(categories.sorted(by: {$0.name < $1.name }))
             
-           
-
-        
+            
+            
+            
             
             
         }
@@ -59,7 +59,7 @@ class Service{
             }
             completionHandler(styles.sorted(by: {$0.name < $1.name}))
             
-
+            
             
             
             
@@ -75,7 +75,7 @@ class Service{
             
             var beers = [Beer]()
             let swiftyJSON = JSON(response.result.value!)
-                
+            
             for (_,subJson) in swiftyJSON["data"]{
                 beers.append(Beer.init(json: subJson, style: style))
             }
@@ -86,8 +86,31 @@ class Service{
         }
     }
     
-
-        
+    func getBreweryFromBeer(beerId : String, completionHandler : @escaping([Brewery]) -> Void) -> Void {
+        Alamofire.request("https://api.brewerydb.com/v2/beer/" + beerId + "/breweries/?" + apikey).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
+            
+            print(response.result.value!)
+            
+            var breweries = [Brewery]()
+            let swiftyJSON = JSON(response.result.value!)
+            
+            for (_,subJson) in swiftyJSON["data"]{
+                breweries.append(Brewery.init(json: subJson))
+            }
+            completionHandler(breweries.sorted(by: {$0.name < $1.name}))
+            
+            
+            
+            
+        }
+    }
+    
+    
+    
+    
     
 }
 
