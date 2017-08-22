@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerApp/Service.swift"
-            timestampString = "525104597.575688"
+            timestampString = "525114601.184977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "Service"
             landmarkType = "3">
          </BreakpointContent>
@@ -391,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerApp/BeerViewController.swift"
-            timestampString = "525104807.393781"
+            timestampString = "525114601.184977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "BeerViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -519,11 +519,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerApp/Service.swift"
-            timestampString = "525104597.575688"
+            timestampString = "525114601.184977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "Service"
             landmarkType = "3">
          </BreakpointContent>
@@ -942,6 +942,145 @@
             endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/BreweryGuildController.swift"
+            timestampString = "525114377.868796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerApp/BreweryGuildController.swift"
+            timestampString = "525116587.099411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "BreweryGuildController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.__deallocating_deinit"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.336806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.init (collectionViewLayout : __ObjC.UICollectionViewLayout) -&gt; BeerApp.BreweryGuildController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.338424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.__allocating_init (collectionViewLayout : __ObjC.UICollectionViewLayout) -&gt; BeerApp.BreweryGuildController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.339775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; BeerApp.BreweryGuildController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.341217"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; BeerApp.BreweryGuildController"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.34258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BeerApp.BreweryGuildController&gt;"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.34391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BeerApp.BreweryGuildController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;BeerApp.BreweryGuildController&gt;"
+                  moduleName = "BeerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/poldepuysseleyr/Documents/GitHub/iOS_Project/BeerApp/BeerApp/BreweryGuildController.swift"
+                  timestampString = "525116731.346189"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

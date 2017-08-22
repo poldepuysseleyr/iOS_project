@@ -128,6 +128,25 @@ class Service{
     }
     
     
+    func getGuildsFromBrewery(breweryId : String , completionHandler : @escaping([Guild]) -> Void) -> Void {
+        Alamofire.request("https://api.brewerydb.com/v2/brewery/" + breweryId + "/guilds?" + apikey).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
+            
+            var guilds = [Guild]()
+            let swiftyJSON = JSON(response.result.value!)
+            
+            for (_,subJson) in swiftyJSON["data"]{
+                guilds.append(Guild.init(json: subJson))
+            }
+            completionHandler(guilds.sorted(by: {$0.name < $1.name}))
+            
+            
+            
+        }
+    }
+    
     
     
     

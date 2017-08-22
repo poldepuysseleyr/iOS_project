@@ -87,7 +87,7 @@
                             <tableViewSection headerTitle="Label" id="ypD-F9-uAa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="304" id="UUK-2I-xdl">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="304"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="304"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UUK-2I-xdl" id="Rov-1d-2Fv">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
@@ -130,7 +130,7 @@
                             <tableViewSection headerTitle="Details" id="Kf1-Me-r0X">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JGR-qB-Dx0">
-                                        <rect key="frame" x="0.0" y="415.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="416" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGR-qB-Dx0" id="O5D-Vm-g6S">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -151,7 +151,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Knq-nc-P9V">
-                                        <rect key="frame" x="0.0" y="459.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="460" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Knq-nc-P9V" id="xYb-dR-QnD">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
@@ -160,7 +160,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See breweries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfa-4T-1fj">
                                                     <rect key="frame" x="8" y="11" width="318" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.084571746537188908" green="0.59309467367222624" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -175,7 +175,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3uY-YQ-aTe">
-                                        <rect key="frame" x="0.0" y="503.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="504" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3uY-YQ-aTe" id="vZN-9J-yqY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -196,7 +196,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="y0I-tw-jQk">
-                                        <rect key="frame" x="0.0" y="547.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="548" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y0I-tw-jQk" id="8cY-9d-LUT">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -221,7 +221,7 @@
                             <tableViewSection headerTitle="Description" id="sQu-B6-Mrr">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="m3Q-FP-LIS">
-                                        <rect key="frame" x="0.0" y="647.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="648" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m3Q-FP-LIS" id="4qs-Ab-P3T">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -471,25 +471,61 @@
         <!--Guilds-->
         <scene sceneID="qRn-i4-0o9">
             <objects>
-                <collectionViewController id="k54-ZB-yz7" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="4ho-Sw-Bgl">
+                <collectionViewController id="k54-ZB-yz7" customClass="BreweryGuildController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4ho-Sw-Bgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vIt-wj-hbz">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="340" height="134"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yjf-ON-bRg">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GuildCell" id="fV2-4m-lwm" customClass="GuildCell" customModule="BeerApp" customModuleProvider="target">
+                                <rect key="frame" x="17.5" y="10" width="340" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="340" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Vq-8L-wiV">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="134"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="125" id="29M-0Q-v0f"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-2r-L2W">
+                                            <rect key="frame" x="133" y="20" width="191" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMp-GC-MYM">
+                                            <rect key="frame" x="129" y="57" width="191" height="18"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Ojy-2r-L2W" firstAttribute="leading" secondItem="0Vq-8L-wiV" secondAttribute="trailing" constant="8" id="0wX-gk-G1r"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ojy-2r-L2W" secondAttribute="trailing" constant="8" id="4Ic-IG-OBK"/>
+                                    <constraint firstItem="FMp-GC-MYM" firstAttribute="leading" secondItem="0Vq-8L-wiV" secondAttribute="trailing" constant="4" id="808-7m-xDF"/>
+                                    <constraint firstItem="0Vq-8L-wiV" firstAttribute="top" secondItem="fV2-4m-lwm" secondAttribute="top" id="8au-cK-0fq"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="FMp-GC-MYM" secondAttribute="trailing" constant="12" id="LBn-84-HFt"/>
+                                    <constraint firstItem="FMp-GC-MYM" firstAttribute="top" secondItem="Ojy-2r-L2W" secondAttribute="bottom" constant="16.5" id="P9R-AG-o9X"/>
+                                    <constraint firstItem="Ojy-2r-L2W" firstAttribute="top" secondItem="fV2-4m-lwm" secondAttribute="topMargin" constant="12" id="V6S-fT-B0m"/>
+                                    <constraint firstItem="0Vq-8L-wiV" firstAttribute="leading" secondItem="fV2-4m-lwm" secondAttribute="leading" id="lWA-CW-E8t"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Vq-8L-wiV" secondAttribute="bottom" id="nn3-IH-rI2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="FMp-GC-MYM" id="zSI-7u-MIN"/>
+                                    <outlet property="imageView" destination="0Vq-8L-wiV" id="vZQ-9F-6WH"/>
+                                    <outlet property="nameLabel" destination="Ojy-2r-L2W" id="VZ8-BB-0u8"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -501,7 +537,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kG9-4W-cMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1002" y="1292"/>
+            <point key="canvasLocation" x="-1002.4" y="1250.824587706147"/>
         </scene>
         <!--Info-->
         <scene sceneID="ceb-1j-qfA">
@@ -531,15 +567,14 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6a-DC-F28">
-                                                            <rect key="frame" x="150.5" y="220" width="58.5" height="75.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="144" y="220" width="71.5" height="75.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="HMx-yJ-PZH" secondAttribute="trailing" constant="16" id="HYP-hW-xuG"/>
-                                                        <constraint firstItem="q6a-DC-F28" firstAttribute="centerX" secondItem="3t3-UT-nF8" secondAttribute="centerX" id="ULY-hq-svO"/>
                                                         <constraint firstItem="HMx-yJ-PZH" firstAttribute="top" secondItem="3t3-UT-nF8" secondAttribute="top" id="fb6-qM-kDg"/>
                                                         <constraint firstItem="HMx-yJ-PZH" firstAttribute="leading" secondItem="3t3-UT-nF8" secondAttribute="leading" constant="16" id="m1X-Qs-BtO"/>
                                                     </constraints>
@@ -644,7 +679,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pX9-0a-IgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2278" y="922"/>
+            <point key="canvasLocation" x="-2279.1999999999998" y="921.58920539730138"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Gom-Zm-NYl">
@@ -704,7 +739,6 @@
         <!--BreweryBeerOverview-->
         <scene sceneID="XVU-Df-Yd3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9V-5B-DKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController title="BreweryBeerOverview" id="MKe-cG-hY8" customClass="BreweryBeerOverviewController" customModule="BeerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ohS-Qy-1xt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -763,6 +797,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="BeerOverview" id="FqQ-vq-frv"/>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9V-5B-DKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="556.37181409295351"/>
         </scene>
@@ -786,6 +821,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="khJ-Bd-LSU"/>
+        <segue reference="Wmj-nN-45G"/>
     </inferredMetricsTieBreakers>
 </document>

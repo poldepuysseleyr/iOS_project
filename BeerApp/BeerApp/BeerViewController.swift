@@ -71,8 +71,10 @@ class BeerViewController : UITableViewController {
             let tabBarViewController = segue.destination as! UITabBarController
             let breweryDetailController =  tabBarViewController.viewControllers?[0] as! BreweryDetailController
             let breweryBeerCategoriesController =  tabBarViewController.viewControllers?[1] as! BreweryBeerCategoriesController
+            let breweryGuildController =  tabBarViewController.viewControllers?[2] as! BreweryGuildController
             breweryDetailController.brewery = self.breweries[0]
             breweryBeerCategoriesController.breweryId = self.breweries[0].id
+            breweryGuildController.breweryId = self.breweries[0].id
             
         }
     }
