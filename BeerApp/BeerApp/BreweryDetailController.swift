@@ -44,4 +44,6 @@ class BreweryDetailController : UITableViewController {
     }
     
     
+    
+    
 }

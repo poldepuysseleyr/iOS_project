@@ -77,7 +77,7 @@ class Service{
             let swiftyJSON = JSON(response.result.value!)
             
             for (_,subJson) in swiftyJSON["data"]{
-                beers.append(Beer.init(json: subJson, style: style))
+                beers.append(Beer.init(json: subJson))
             }
             completionHandler(beers.sorted(by: {$0.name < $1.name}))
             
@@ -102,6 +102,25 @@ class Service{
             }
             completionHandler(breweries.sorted(by: {$0.name < $1.name}))
             
+            
+            
+            
+        }
+    }
+    
+    func getBeersFromBrewery(breweryId : String , completionHandler : @escaping([Beer]) -> Void) -> Void {
+        Alamofire.request("https://api.brewerydb.com/v2/brewery/" + breweryId + "/beers?" + apikey).responseJSON{ response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")
+            
+            var beers = [Beer]()
+            let swiftyJSON = JSON(response.result.value!)
+            
+            for (_,subJson) in swiftyJSON["data"]{
+                beers.append(Beer.init(json: subJson))
+            }
+            completionHandler(beers.sorted(by: {$0.name < $1.name}))
             
             
             

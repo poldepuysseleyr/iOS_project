@@ -27,14 +27,18 @@ class Beer {
         self.label = label
         self.description = description
     }
+    
+    
+    
+    
 }
 
 extension Beer {
     
-    convenience init(json : JSON, style : Style){
+    convenience init(json : JSON){
         let beerId = json["id"].stringValue
         let beerName = json["name"].stringValue
-        let beerStyle = style.name
+        let beerStyle = json["style"]["name"].stringValue
         let beerABV = json["abv"].stringValue
         var beerAvailability = "Unknown"
         if !json["available"]["name"].stringValue.isEmpty {

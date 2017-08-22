@@ -21,7 +21,6 @@ class BeerViewController : UITableViewController {
     @IBOutlet weak var beerDescription : UILabel!
     @IBOutlet weak var imageView : UIImageView!
     
-    private let apikey = "key=4626ec2bee6f31163dca9b789a8a76d1"
 
     
     var beer : Beer?
@@ -71,7 +70,9 @@ class BeerViewController : UITableViewController {
         if segue.identifier == "ShowBrewery"{
             let tabBarViewController = segue.destination as! UITabBarController
             let breweryDetailController =  tabBarViewController.viewControllers?[0] as! BreweryDetailController
+            let breweryBeerCategoriesController =  tabBarViewController.viewControllers?[1] as! BreweryBeerCategoriesController
             breweryDetailController.brewery = self.breweries[0]
+            breweryBeerCategoriesController.breweryId = self.breweries[0].id
             
         }
     }
