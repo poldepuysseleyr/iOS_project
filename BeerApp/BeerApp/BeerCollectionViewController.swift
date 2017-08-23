@@ -16,7 +16,9 @@ class BeerCollectionViewController : UICollectionViewController{
     
     
     var style : Style?
-    private var beers: [Beer] = []    
+    private var beers: [Beer] = []
+    private var mustBeHidden = true
+    private var switchHidden = true
     
     
     override func viewDidLoad() {
@@ -37,11 +39,24 @@ class BeerCollectionViewController : UICollectionViewController{
         }
     }
     
+    @IBAction func setButtonsVisible(){
+        if switchHidden {
+            self.mustBeHidden = false
+            self.switchHidden = false
+            self.collectionView?.reloadData()
+            
+        }else {
+            self.mustBeHidden = true
+            self.switchHidden = true
+            self.collectionView?.reloadData()
+        }
+    }
+    
     
     @IBAction func unwindFromCreate(_ segue: UIStoryboardSegue) {
         let source = segue.source as! CreateBeerViewController
         if let beer = source.beer {
-            self.beers.append(beer)
+            self.beers.insert(beer, at: 0)
             collectionView?.insertItems(at: [IndexPath(row: 0, section: 0)])
             self.collectionView?.reloadData()
         }
@@ -60,7 +75,14 @@ class BeerCollectionViewController : UICollectionViewController{
         }
     }
     
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if !self.mustBeHidden {
+            self.beers.remove(at: indexPath.row)
+            self.collectionView?.deleteItems(at: [indexPath])
+        }else{
+            performSegue(withIdentifier: "ShowBeer", sender: self)
+        }
+    }
     
     
     
@@ -84,6 +106,11 @@ class BeerCollectionViewController : UICollectionViewController{
             let url = URL(string: beer.label)!
             cell.imageView.af_setImage(withURL: url)
         }
+        if mustBeHidden {
+            cell.deleteButton.isHidden = true
+        } else {
+            cell.deleteButton.isHidden = false
+        }
         
         
         
@@ -97,6 +124,6 @@ class BeerCollectionViewController : UICollectionViewController{
     
     
     
-
+    
     
 }

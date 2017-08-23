@@ -19,26 +19,28 @@ class CreateBeerViewController : UITableViewController, UIImagePickerControllerD
     
     var beer : Beer?
     var selectedImage : UIImage?
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imagePicker.delegate = self
         Image.image = #imageLiteral(resourceName: "Label_Placeholder")
     }
     
     @IBAction func getPicture(){
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        self.present(imagePicker, animated: true, completion: nil)
+        
+        self.imagePicker.sourceType = .photoLibrary
+        self.imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        self.present(self.imagePicker, animated: true, completion: nil)
     }
     
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.selectedImage = image
-        print("aabaabababa")
         picker.dismiss(animated: true, completion: nil)
-        self.Image.image = #imageLiteral(resourceName: "Brewery_Placeholder")
+        self.Image.image = self.selectedImage
     }
+
 
     
     

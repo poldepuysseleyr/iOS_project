@@ -68,6 +68,10 @@ class StylesViewController : UITableViewController{
             }
         }
     }
+    
+    @IBAction func unwindToMasterCategoriesViewController(segue: UIStoryboardSegue){
+        self.dismiss(animated: true, completion: nil)
+    }
 
     
 }
