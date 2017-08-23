@@ -29,8 +29,18 @@ class BeerViewController : UITableViewController {
     override func viewDidLoad(){
         
         Service.shared.getBreweryFromBeer(beerId: self.beer!.id){result in
-            self.breweries = result
-            self.beerBrewery.text = "Brewed by: \(self.breweries[0].name)"
+            switch result {
+            case .success(let breweries) :
+                self.breweries = breweries as! [Brewery]
+                self.beerBrewery.text = "Brewed by: \(self.breweries[0].name)"
+            case .failure(let string):
+                let alert = UIAlertController(title: "Error", message: string, preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
         }
         
         self.tableView.rowHeight = UITableViewAutomaticDimension

@@ -22,8 +22,18 @@ class BeerCollectionViewController : UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         Service.shared.getBeers(style: style!){result in
-            self.beers = result
-            self.collectionView!.reloadData()
+            switch result {
+            case .success(let beers) :
+                self.beers = beers as! [Beer]
+                self.collectionView!.reloadData()
+            case .failure(let string):
+                let alert = UIAlertController(title: "Error", message: string, preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
         }
     }
     

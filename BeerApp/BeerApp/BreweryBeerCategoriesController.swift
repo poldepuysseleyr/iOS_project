@@ -19,23 +19,33 @@ class BreweryBeerCategoriesController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Service.shared.getBeersFromBrewery(breweryId: breweryId!){result in
-            self.beers = result
-            var availabilitiesHelp : [String] = []
-            for beer in self.beers {
-                availabilitiesHelp.append(beer.availability)
-            }
-            let avavailabilities = Array(Set(availabilitiesHelp))
-            for a in avavailabilities {
-                var amount : Int = 0
+            switch result {
+            case .success(let beers) :
+                self.beers = beers as! [Beer]
+                var availabilitiesHelp : [String] = []
                 for beer in self.beers {
-                    if a == beer.availability{
-                        amount += 1
-                    }
-                
+                    availabilitiesHelp.append(beer.availability)
                 }
-                self.availabilities.append((a,amount))
+                let avavailabilities = Array(Set(availabilitiesHelp))
+                for a in avavailabilities {
+                    var amount : Int = 0
+                    for beer in self.beers {
+                        if a == beer.availability{
+                            amount += 1
+                        }
+                        
+                    }
+                    self.availabilities.append((a,amount))
+                }
+                self.tableView.reloadData()
+            case .failure(let string):
+                let alert = UIAlertController(title: "Error", message: string, preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
             }
-            self.tableView.reloadData()
+            
         }
         
     }

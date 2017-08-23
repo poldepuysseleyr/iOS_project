@@ -21,8 +21,18 @@ class StylesViewController : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         Service.shared.getStyles(categoryId: categoryId){result in
-            self.styles = result
-            self.tableView.reloadData()
+            switch result {
+            case .success(let styles) :
+                self.styles = styles as! [Style]
+                self.tableView.reloadData()
+            case .failure(let string):
+                let alert = UIAlertController(title: "Error", message: string, preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
         }
        
     }

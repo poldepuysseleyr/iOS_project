@@ -19,8 +19,18 @@ class BreweryGuildController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         Service.shared.getGuildsFromBrewery(breweryId: breweryId!){result in
-            self.guilds = result
-            self.collectionView?.reloadData()
+            switch result {
+            case .success(let guilds) :
+                self.guilds = guilds as! [Guild]
+                self.collectionView?.reloadData()
+            case .failure(let string):
+                let alert = UIAlertController(title: "Error", message: string, preferredStyle: UIAlertControllerStyle.alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
         }
     }
     
