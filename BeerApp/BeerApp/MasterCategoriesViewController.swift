@@ -75,7 +75,9 @@ class MasterCategoriesViewController: UITableViewController {
         return cell
     }
     
-    
+    @IBAction func unwindToMasterCategoriesViewController(segue: UIStoryboardSegue){
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     
