@@ -28,7 +28,7 @@ class BeerViewController : UITableViewController {
     
     override func viewDidLoad(){
         
-        Service.shared.getBreweryFromBeer(beerId: self.beer!.id){result in
+        Service.shared.getBreweryFromBeer(beerId: self.beer!.id!){result in
             switch result {
             case .success(let breweries) :
                 self.breweries = breweries as! [Brewery]
@@ -79,9 +79,14 @@ class BeerViewController : UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowBrewery"{
             let tabBarViewController = segue.destination as! UITabBarController
-            let breweryDetailController =  tabBarViewController.viewControllers?[0] as! BreweryDetailController
-            let breweryBeerCategoriesController =  tabBarViewController.viewControllers?[1] as! BreweryBeerCategoriesController
-            let breweryGuildController =  tabBarViewController.viewControllers?[2] as! BreweryGuildController
+            let navBarController1 =  tabBarViewController.viewControllers?[0] as! UINavigationController
+            let breweryDetailController = navBarController1.topViewController as! BreweryDetailController
+            
+            let navBarController2 =  tabBarViewController.viewControllers?[1] as! UINavigationController
+            let breweryBeerCategoriesController =  navBarController2.topViewController as! BreweryBeerCategoriesController
+            
+            let navBarController3 =  tabBarViewController.viewControllers?[2] as! UINavigationController
+            let breweryGuildController =  navBarController3.topViewController as! BreweryGuildController
             breweryDetailController.brewery = self.breweries[0]
             breweryBeerCategoriesController.breweryId = self.breweries[0].id
             breweryGuildController.breweryId = self.breweries[0].id

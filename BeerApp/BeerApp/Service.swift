@@ -63,6 +63,7 @@ class Service{
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")
             
+        
             
             guard response.error == nil else {
                 completionHandler(BackendResponse.failure((response.error?.localizedDescription)!))

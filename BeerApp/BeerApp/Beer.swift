@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 class Beer {
-    let id : String
+    let id : String?
     let name : String
     let style : String
     let ABV : String
@@ -18,7 +18,11 @@ class Beer {
     let description : String
     
     
-    init(id : String, name : String, style : String, ABV : String, availability : String,label : String, description : String) {
+    let year : String?
+    let labelSecondary : UIImage?
+    
+    
+    init(id : String? = nil, name : String, style : String, ABV : String, availability : String,label : String, description : String, year : String? = nil , labelSecondary : UIImage? = nil) {
         self.id = id
         self.name = name
         self.style = style
@@ -26,9 +30,9 @@ class Beer {
         self.availability = availability
         self.label = label
         self.description = description
+        self.year = year
+        self.labelSecondary = labelSecondary
     }
-    
-    
     
     
 }

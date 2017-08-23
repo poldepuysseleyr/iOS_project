@@ -37,6 +37,16 @@ class BeerCollectionViewController : UICollectionViewController{
         }
     }
     
+    
+    @IBAction func unwindFromCreate(_ segue: UIStoryboardSegue) {
+        let source = segue.source as! CreateBeerViewController
+        if let beer = source.beer {
+            self.beers.append(beer)
+            collectionView?.insertItems(at: [IndexPath(row: 0, section: 0)])
+            self.collectionView?.reloadData()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowBeer" {
             if let indexPath = collectionView!.indexPathsForSelectedItems?.first {
@@ -51,6 +61,9 @@ class BeerCollectionViewController : UICollectionViewController{
     }
     
     
+    
+    
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -62,7 +75,10 @@ class BeerCollectionViewController : UICollectionViewController{
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BeerOverviewCell", for: indexPath) as! BeerOverviewCell
         let beer = self.beers[indexPath.row]
-        if beer.label.isEmpty{
+        if beer.labelSecondary != nil {
+            cell.imageView.image = beer.labelSecondary!
+        }
+        else if beer.label.isEmpty{
             cell.imageView.image = #imageLiteral(resourceName: "Label_Placeholder")
         }else{
             let url = URL(string: beer.label)!
@@ -76,6 +92,9 @@ class BeerCollectionViewController : UICollectionViewController{
         cell.nameLabel.text = beer.name
         return cell
     }
+    
+    
+    
     
     
 

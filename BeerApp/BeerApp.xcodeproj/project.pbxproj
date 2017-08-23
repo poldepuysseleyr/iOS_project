@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		090E1B981F4876900025B014 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090E1B971F4876900025B014 /* BeerViewController.swift */; };
+		09341DFE1F4D28BD002AAD9F /* CreateBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09341DFD1F4D28BD002AAD9F /* CreateBeerViewController.swift */; };
 		0948FE8B1F49B75700EEF972 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948FE8A1F49B75700EEF972 /* Category.swift */; };
 		0948FE8D1F49BF3E00EEF972 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948FE8C1F49BF3E00EEF972 /* Style.swift */; };
 		0948FE8F1F49C76B00EEF972 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0948FE8E1F49C76B00EEF972 /* Beer.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		090E1B971F4876900025B014 /* BeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		09341DFD1F4D28BD002AAD9F /* CreateBeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBeerViewController.swift; sourceTree = "<group>"; };
 		0948FE8A1F49B75700EEF972 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0948FE8C1F49BF3E00EEF972 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		0948FE8E1F49C76B00EEF972 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				095CFE7F1F4C72C7003E3876 /* BreweryBeerCategoriesController.swift */,
 				095CFE7D1F4C6EDD003E3876 /* BreweryBeerOverviewController.swift */,
 				095CFE851F4C997B003E3876 /* BreweryGuildController.swift */,
+				09341DFD1F4D28BD002AAD9F /* CreateBeerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				090E1B981F4876900025B014 /* BeerViewController.swift in Sources */,
 				09DB43751F48605B00E3E9A1 /* StylesViewController.swift in Sources */,
 				097115971F4B660F00BB26A0 /* Brewery.swift in Sources */,
+				09341DFE1F4D28BD002AAD9F /* CreateBeerViewController.swift in Sources */,
 				09DB437C1F48678600E3E9A1 /* Service.swift in Sources */,
 				0965571E1F47627F00ABC8FD /* MasterCategoriesViewController.swift in Sources */,
 				0965571C1F47627F00ABC8FD /* AppDelegate.swift in Sources */,
